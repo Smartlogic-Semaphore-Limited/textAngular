@@ -2,7 +2,7 @@
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.5.0
+Version 1.5.1-SL02
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */
@@ -1578,6 +1578,16 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
                                     text = targetDom.html() || dom.html();
                                 }
 							}else{
+								// remove unnecessary line breaking
+								var surroundingTags = ["html", "body"];
+								surroundingTags.forEach(function(tag) {
+									var openingTag = "<" + tag + ">", closingTag = "</" + tag + ">";
+									text = text.replace(openingTag + "\n", openingTag);
+									text = text.replace(openingTag + "\r\n", openingTag);
+									text = text.replace("\r\n" + closingTag, closingTag);
+									text = text.replace("\n" + closingTag, closingTag);
+								});
+
 								// remove unnecessary chrome insert
 								text = text.replace(/<(|\/)meta[^>]*?>/ig, '');
 								if(text.match(/<[^>]*?(ta-bind)[^>]*?>/)){
