@@ -2,7 +2,7 @@
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.5.1-SL02
+Version 1.5.1-SL03
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */
@@ -1089,18 +1089,18 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
 					mustHaveModifiers: [_META_KEY + _CTRL_KEY],
 					keyCode: 89
 				},
-				//		TabKey
+				//		ctrl + TabKey
 				{
-					specialKey: 'TabKey',
-					forbiddenModifiers: _META_KEY + _SHIFT_KEY + _ALT_KEY + _CTRL_KEY,
-					mustHaveModifiers: [],
+					specialKey: 'CtrlTabKey',
+					forbiddenModifiers: _META_KEY + _SHIFT_KEY + _ALT_KEY,
+					mustHaveModifiers: [_CTRL_KEY],
 					keyCode: 9
 				},
 				//		shift + TabKey
 				{
-					specialKey: 'ShiftTabKey',
-					forbiddenModifiers: _META_KEY + _ALT_KEY + _CTRL_KEY,
-					mustHaveModifiers: [_SHIFT_KEY],
+					specialKey: 'CtrlShiftTabKey',
+					forbiddenModifiers: _META_KEY + _ALT_KEY,
+					mustHaveModifiers: [_CTRL_KEY, _SHIFT_KEY],
 					keyCode: 9
 				}
 			];
