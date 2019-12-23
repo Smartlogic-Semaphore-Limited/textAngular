@@ -611,7 +611,7 @@ angular.module('textAngularSetup', [])
 		activeState: function(){
 			return this.$editor().queryFormatBlockState('blockquote');
 		},
-		commandKeyCode: 'TabKey'
+		commandKeyCode: 'CtrlTabKey'
 	});
 	taRegisterTool('outdent', {
 		iconclass: 'fa fa-outdent',

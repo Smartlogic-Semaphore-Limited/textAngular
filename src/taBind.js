@@ -115,11 +115,11 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
 					mustHaveModifiers: [_META_KEY + _CTRL_KEY],
 					keyCode: 89
 				},
-				//		TabKey
+				//		ctrl + TabKey
 				{
-					specialKey: 'TabKey',
-					forbiddenModifiers: _META_KEY + _SHIFT_KEY + _ALT_KEY + _CTRL_KEY,
-					mustHaveModifiers: [],
+					specialKey: 'CtrlTabKey',
+					forbiddenModifiers: _META_KEY + _SHIFT_KEY + _ALT_KEY,
+					mustHaveModifiers: [_CTRL_KEY],
 					keyCode: 9
 				},
 				//		shift + TabKey
