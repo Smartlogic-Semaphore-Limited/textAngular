@@ -83,7 +83,7 @@ angular.module('textAngularSetup', [])
 	// Or to disable a specific keyboard binding, provide a function which returns false.
 	// Note: 'RedoKey' and 'UndoKey' are internally bound to the redo and undo functionality.
 	// At present, the following commandKeyCodes are in use:
-	// 98, 'TabKey', 'ShiftTabKey', 105, 117, 'UndoKey', 'RedoKey'
+	// 98, 'CtrlQKey', 'CtrlShiftQKey', 105, 117, 'UndoKey', 'RedoKey'
 	//
 	// To map to an new commandKeyCode, add a new key mapping such as:
 	// {commandKeyCode: 'CustomKey', testForKey: function (event) {
@@ -611,7 +611,7 @@ angular.module('textAngularSetup', [])
 		activeState: function(){
 			return this.$editor().queryFormatBlockState('blockquote');
 		},
-		commandKeyCode: 'TabKey'
+		commandKeyCode: 'CtrlQKey'
 	});
 	taRegisterTool('outdent', {
 		iconclass: 'fa fa-outdent',
@@ -622,7 +622,7 @@ angular.module('textAngularSetup', [])
 		activeState: function(){
 			return false;
 		},
-		commandKeyCode: 'ShiftTabKey'
+		commandKeyCode: 'CtrlShiftQKey'
 	});
 	taRegisterTool('italics', {
 		iconclass: 'fa fa-italic',

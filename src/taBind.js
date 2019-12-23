@@ -115,19 +115,19 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
 					mustHaveModifiers: [_META_KEY + _CTRL_KEY],
 					keyCode: 89
 				},
-				//		TabKey
+				//		ctrl + q
 				{
-					specialKey: 'TabKey',
-					forbiddenModifiers: _META_KEY + _SHIFT_KEY + _ALT_KEY + _CTRL_KEY,
-					mustHaveModifiers: [],
-					keyCode: 9
+					specialKey: 'CtrlQKey',
+					forbiddenModifiers: _SHIFT_KEY + _ALT_KEY,
+					mustHaveModifiers: [_META_KEY + _CTRL_KEY],
+					keyCode: 81
 				},
-				//		shift + TabKey
+				//		ctrl + shift + q
 				{
-					specialKey: 'ShiftTabKey',
-					forbiddenModifiers: _META_KEY + _ALT_KEY + _CTRL_KEY,
-					mustHaveModifiers: [_SHIFT_KEY],
-					keyCode: 9
+					specialKey: 'CtrlShiftQKey',
+					forbiddenModifiers: _ALT_KEY,
+					mustHaveModifiers: [_META_KEY + _CTRL_KEY, _SHIFT_KEY],
+					keyCode: 81
 				}
 			];
 			function _mapKeys(event) {
