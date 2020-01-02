@@ -115,20 +115,6 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
 					mustHaveModifiers: [_META_KEY + _CTRL_KEY],
 					keyCode: 89
 				},
-				//		ctrl + q
-				{
-					specialKey: 'CtrlQKey',
-					forbiddenModifiers: _SHIFT_KEY + _ALT_KEY,
-					mustHaveModifiers: [_META_KEY + _CTRL_KEY],
-					keyCode: 81
-				},
-				//		ctrl + shift + q
-				{
-					specialKey: 'CtrlShiftQKey',
-					forbiddenModifiers: _ALT_KEY,
-					mustHaveModifiers: [_META_KEY + _CTRL_KEY, _SHIFT_KEY],
-					keyCode: 81
-				}
 			];
 			function _mapKeys(event) {
 				var specialKey;
